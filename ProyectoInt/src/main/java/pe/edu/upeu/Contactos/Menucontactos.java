@@ -28,6 +28,13 @@ public class Menucontactos{
     public void estadistica() {
         
     }
+    public void informacion() {
+        System.out.println("info de la app");
+        
+    }
+    public void apoyo() {
+        System.out.println("datos y redes sociales");
+    }
 
 
     public void Menuprincipal() {

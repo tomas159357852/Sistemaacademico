@@ -19,7 +19,9 @@ public class Menucontactos{
         +"\n ------------------------"
         +"\n 5.- Conocer más sobre la aplicación"
         +"\n 6.- Deseo apoyar esta app");
-
+    public void Matematicas(){
+        
+    }
         
     }
 

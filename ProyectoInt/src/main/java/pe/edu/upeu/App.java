@@ -1,7 +1,7 @@
 package pe.edu.upeu;
 import java.io.Console;
 import pe.edu.upeu.Datos.Usuarios;
-import pe.edu.upeu.Contactos.Menucontactos;
+import pe.edu.upeu.Contactos.Menucontactos.*;
 
 import pe.edu.upeu.Utils.*;
 /**
@@ -9,7 +9,7 @@ import pe.edu.upeu.Utils.*;
  *
  */
 public class App {
-
+    
     public static void validarAccesoAdministrador() {
         int adminop;
         LeerTeclado teclado=new LeerTeclado();
@@ -44,7 +44,7 @@ public class App {
     
 
 
-    public static void Menuprincipal() {
+    public static void Menuinicio() {
         LeerTeclado opcion=new LeerTeclado();
         int inicio=0;
         String mensaje="|-----|Bienvenido al sistema de registro de habilidades con competencias especificas en el Area de sistemas|-----|"+
@@ -52,11 +52,12 @@ public class App {
         "\n2.- Ingresar como cliente";
         System.out.println(mensaje);
         inicio=opcion.leer(0,"Ingrese la opción correspondiente:");
+        
         do {                        
             switch (inicio) {
                 case 1:validarAccesoAdministrador();
                 break;
-                case 2:Menuprincipal(); 
+                case 2:
                 break;
                 default: System.out.println("La opcion no existe!"); break;    
             }             
@@ -76,7 +77,6 @@ public class App {
 
 
     public static void main(String[] args) {
-        Menuprincipal();
+        Menuinicio();
     }
-
 }

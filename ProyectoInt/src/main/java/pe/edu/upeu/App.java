@@ -1,15 +1,11 @@
 package pe.edu.upeu;
 import java.io.Console;
 import pe.edu.upeu.Datos.Usuarios;
-import pe.edu.upeu.Contactos.Menucontactos.*;
+import pe.edu.upeu.Contactos.Menucontactos;
 
 import pe.edu.upeu.Utils.*;
-/**
- * Hello world!
- *
- */
+
 public class App {
-    
     public static void validarAccesoAdministrador() {
         int adminop;
         LeerTeclado teclado=new LeerTeclado();
@@ -57,7 +53,8 @@ public class App {
             switch (inicio) {
                 case 1:validarAccesoAdministrador();
                 break;
-                case 2:
+                case 2:Menucontactos menutr=new Menucontactos();
+                menutr.Menuprincipal();
                 break;
                 default: System.out.println("La opcion no existe!"); break;    
             }             

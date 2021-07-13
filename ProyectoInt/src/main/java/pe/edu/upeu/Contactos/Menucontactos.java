@@ -10,9 +10,13 @@ public class Menucontactos{
     LeerTeclado leer=new LeerTeclado();
     
     public void Matematicas() {
+        System.out.println("Tenemnos especialdiades en:"+
+        "\na.	GEOMETRIA"+
+        "\nb.	ALGEBRA"+
+        "\nc.	ARITMETICA"+
+        "\nd.	TRIGONOMETRIA");
+        }
         
-    }
-
     public void Ingles() {
         
     }
@@ -37,8 +41,7 @@ public class Menucontactos{
         +"\n 5.- Conocer más sobre la aplicación"
         +"\n 6.- Deseo apoyar esta app");
     int opcionesc=leer.leer(0,"Ingresa la opción correspondiente");
-    do{
-        switch(opcionesc){
+    switch(opcionesc){
             case 1: Matematicas();
             break;
             case 2: Ingles();
@@ -51,8 +54,8 @@ public class Menucontactos{
             break;
             case 6:
             break;
+        default: System.out.println("Opción incorrecta");
         }
-    }while(opcionesc!=0);
         
     }
 

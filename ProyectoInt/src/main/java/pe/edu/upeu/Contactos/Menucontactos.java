@@ -57,9 +57,9 @@ public class Menucontactos{
             break;
             case 4: estadistica();
             break;
-            case 5:
+            case 5: informacion();
             break;
-            case 6:
+            case 6: apoyo();
             break;
         default: System.out.println("Opción incorrecta");
         }

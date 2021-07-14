@@ -21,8 +21,7 @@ public class Usuarios extends Appcrud{
             usuTO.setUsuario(usuario);        
             ver=new LeerArchivo("Administradores.txt");
             usuTO.setIdUsuario(generarId(ver, 0, "U", 1));
-            usuTO.setPerfil(
-            teclado.leer("", "Ingrese el Perfil de usuariio (ADMIN): ").toUpperCase());        
+            usuTO.setPerfil(teclado.leer("", "Ingrese el Perfil de usuariio (ADMIN): ").toUpperCase());        
             Console cons=System.console();
             System.out.println("Ingrese la clave:");
             char[] pws=cons.readPassword();

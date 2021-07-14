@@ -2,6 +2,7 @@ package pe.edu.upeu;
 import java.io.Console;
 import pe.edu.upeu.Datos.Usuarios;
 import pe.edu.upeu.Contactos.Menucontactos;
+import pe.edu.upeu.Contactos.Contactos1;
 
 import pe.edu.upeu.Utils.*;
 
@@ -33,6 +34,8 @@ public class App {
             registro.registarUsuario();
             case 2: Usuarios registros=new Usuarios();
             registros.eliminarUsuario();
+            case 3: Contactos1 registr=new Contactos1();
+            registr.Menucontacos();
             break;
     
         }

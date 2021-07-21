@@ -240,13 +240,13 @@ public class Appcrud {
                     return datos;
         }
     
-    public void imprimirLista(Object[][] data){
-            if(data!=null){
+    public void imprimirLista(Object[][] Contactos){
+            if(Contactos!=null){
                 int x=1;
-            for (int i = 0; i < data.length; i++) {
+            for (int i = 0; i < Contactos.length; i++) {
                 System.out.print(x+"\t");
-                for (int j = 0; j < data[0].length; j++) {
-                System.out.print(data[i][j]+"\t\t");    
+                for (int j = 0; j < Contactos[0].length; j++) {
+                System.out.print(Contactos[i][j]+"\t\t");    
                 }
                 System.out.println("");
                 x++;

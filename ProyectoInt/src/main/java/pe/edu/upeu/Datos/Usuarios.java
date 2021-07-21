@@ -3,33 +3,35 @@ package pe.edu.upeu.Datos;
 import java.io.Console;
 
 import pe.edu.upeu.Datos.Appcrud;
+import pe.edu.upeu.Datos.Usuario;
 import pe.edu.upeu.Utils.LeerArchivo;
 import pe.edu.upeu.Utils.LeerTeclado;
 import pe.edu.upeu.Utils.Utilidades;
 
 public class Usuarios extends Appcrud{
     LeerArchivo ver;
-    Usuario usuTO;
+    Usuario usuGen;
 
     LeerTeclado teclado=new LeerTeclado();
     Utilidades ut=new Utilidades();
 
     public void registarUsuario() {
-        usuTO=new Usuario();
+        usuGen=new Usuario();
         String usuario=teclado.leer("", "Ingrese un usuario:");
         if(validarExisteUser(usuario)){
-            usuTO.setUsuario(usuario);        
+            usuGen.setUsuario(usuario);        
             ver=new LeerArchivo("Administradores.txt");
-            usuTO.setIdUsuario(generarId(ver, 0, "U", 1));
-            usuTO.setPerfil(teclado.leer("", "Ingrese el Perfil de usuariio (ADMIN): ").toUpperCase());        
+            usuGen.setIdUsuario(generarId(ver, 0, "A", 1));
+            usuGen.setPerfil(
+            teclado.leer("", "Ingrese el cargo asignado: ").toUpperCase());        
             Console cons=System.console();
             System.out.println("Ingrese la clave:");
             char[] pws=cons.readPassword();
-            usuTO.setClave(String.valueOf(pws));
+            usuGen.setClave(String.valueOf(pws));
             ver=new LeerArchivo("Administradores.txt");
-            agregarContenido(ver, usuTO);
+            agregarContenido(ver, usuGen);
         }else{
-            System.out.println("El usuario ya existe....coloque otro usuario");
+            System.out.println("El administrador ya existe, pruebe con otro");
             registarUsuario();
         }
     }
@@ -47,7 +49,7 @@ public class Usuarios extends Appcrud{
         ut.clearConsole();
         ver=new LeerArchivo("Administradores.txt");
         imprimirLista(listarContenido(ver));
-        ver=new LeerArchivo("Administradores.txt");
+        ver=new LeerArchivo("Usuario.txt");
         String idU=teclado.leer("", "Ingrese el Id del usuario que desea eliminar:");
         eliminarRegistros(ver, 0, idU);
         return false;
